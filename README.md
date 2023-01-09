@@ -17,7 +17,7 @@ This role has been generated using the [cookiecutter](https://github.com/cookiec
 
 ## Getting Started
 
-These instructions will get you a copy of the role for your Ansible playbook. Once launched, it will install Mealie in a Debian system.
+These instructions will get you a copy of the role for your Ansible playbook. Once launched, it will install Mealie.
 
 ### Prerequisities
 
