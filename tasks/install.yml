@@ -1,0 +1,7 @@
+---
+- name: "MEALIE | Ensure mealie is running"
+  community.docker.docker_compose:
+    project_src: "{{ mealie_config_path | expanduser | realpath }}"
+    build: false
+  tags:
+    - mealie_install

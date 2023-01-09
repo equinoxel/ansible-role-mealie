@@ -1,0 +1,23 @@
+---
+- name: "MEALIE | Set up directories"
+  ansible.builtin.file:
+    state: directory
+    path: "{{ item }}"
+    owner: "{{ ansible_effective_user_id }}"
+    group: "{{ ansible_effective_group_id }}"
+    mode: "0750"
+  with_items:
+    - "}} mealie_skeleton_paths }}"
+  tags:
+    - mealie_configure
+  become: true
+
+- name: "MEALIE | Write configuration files"
+  ansible.builtin.template:
+    src: "}} item }}.j2"
+    dest: "}} cookiecutter.app_name }}_config_path | expanduser | realpath  }}/}} item  }}"
+    mode: '0640'
+  loop:
+    - "docker-compose.yml"
+  tags:
+    - mealie_configure

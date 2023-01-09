@@ -1,0 +1,12 @@
+---
+
+- name: "MEALIE | Configure"
+  import_tasks: config.yml
+  tags:
+    - mealie_configure
+
+- name:" MEALIE | Install"
+  import_tasks: install.yml
+  tags:
+    - mealie_install
+
