@@ -1,16 +1,18 @@
 ---
 
-## General
-# Version
-mealie_version: 1.0.0
+mealie_docker_version: "latest"
+mealie_port: "9925"
+mealie_timezone: "Europe/Brussels"
 
-# mealie paths
+# Mealie paths
 mealie_root_path: /opt/mealie
 mealie_config_path: "{{ mealie_root_path }}/conf"
+mealie_data_path: "{{ mealie_root_path }}/data"
 mealie_skeleton_paths:
   - "{{ mealie_config_path }}"
+  - "{{ mealie_data_path }}"
 
 # Documentation
-mealie_documentation_link: ""
+mealie_documentation_link: "https://git.laurivan.com/Dev/ansible-role-mealie/src/branch/main/README.md"
 
 

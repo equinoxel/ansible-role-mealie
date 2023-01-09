@@ -1,3 +1,25 @@
 # mealie docker compose
-version: '3.9'
+version: "3.1"
 services:
+  mealie:
+    image: hkotel/mealie:latest
+    restart: always
+    ports:
+      - "{{ mealie_port }}:80"
+    environment:
+      TZ: "{{ mealie_timezone }}"
+
+      # Default Recipe Settings
+      RECIPE_PUBLIC: 'true'
+      RECIPE_SHOW_NUTRITION: 'true'
+      RECIPE_SHOW_ASSETS: 'true'
+      RECIPE_LANDSCAPE_VIEW: 'true'
+      RECIPE_DISABLE_COMMENTS: 'false'
+      RECIPE_DISABLE_AMOUNT: 'false'
+
+      # Gunicorn
+      # WEB_CONCURRENCY: 2
+      # WORKERS_PER_CORE: 0.5
+      # MAX_WORKERS: 8
+    volumes:
+      - "{{ mealie_data_path }}:/app/data"

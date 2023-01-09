@@ -5,7 +5,7 @@
   tags:
     - mealie_configure
 
-- name:" MEALIE | Install"
+- name: "MEALIE | Install"
   import_tasks: install.yml
   tags:
     - mealie_install
