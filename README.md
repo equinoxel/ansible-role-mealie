@@ -1,6 +1,6 @@
-# Mealie Ansible role
+# laurivan.mealie
 
-![Logo](logo.gif)
+This role installs Mealie via Docker compose.
 
 This role has been generated using the [cookiecutter](https://github.com/cookiecutter/cookiecutter) tool, you can generate a similar role that fits your needs using the this [cookiecutter template](https://github.com/idealista/cookiecutter-ansible-role).
 
@@ -80,21 +80,20 @@ pipenv run molecule test
 
 ## Versioning
 
-For the versions available, see the [tags on this repository](https://github.com/equinoxel/ansible-role-mealie/tags).
+For the versions available, see the [tags on this repository](https://git.laurivan.com/Dev/ansible-role-mealie/tags).
 
 Additionaly you can see what change in each version in the [CHANGELOG.md](CHANGELOG.md) file.
 
 ## Authors
 
-- **Idealista**
-- **Laur IVAN**
+- **Laur IVAN** - [web](https://www.laurivan.com)
 
 ## License
 
-![Apache 2.0 License](https://img.shields.io/hexpm/l/plug.svg)
+![MIT License](https://img.shields.io/badge/license-MIT%20License-brightgreen)
 
-This project is licensed under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license - see the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](.github/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
