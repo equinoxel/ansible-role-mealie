@@ -8,7 +8,7 @@ galaxy_info:
   description: Mealie Role
   min_ansible_version: 2.4
   min_ansible_version: 2.4
-  license: Apache 2.0
+  license: MIT
   galaxy_tags:
     - tag1
     - tag2
