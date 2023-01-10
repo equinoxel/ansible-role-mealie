@@ -3,16 +3,15 @@
 galaxy_info:
   author: Laur Ivan
   namespace: laurivan
-  
   role_name: mealie
-  description: Mealie Role
+  description: Install Mealie with SQLite via Docker
   min_ansible_version: 2.4
   min_ansible_version: 2.4
   license: MIT
   galaxy_tags:
-    - tag1
-    - tag2
-    - tag3
+    - mealie
+    - recipe
+    - docker
   platforms:
     
     - name: Debian
