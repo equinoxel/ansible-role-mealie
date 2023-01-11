@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://git.laurivan.com/laur/ansible-role-mealie/compare/v1.0.0...v1.1.0) (2023-01-11)
+
+
+### Bug Fixes
+
+* Update tags for ansible galaxy. ([632f196](https://git.laurivan.com/laur/ansible-role-mealie/commit/632f1969765b995bb4a693d0646e9397bb9f04a3))
+
 ## 1.0.0 (2023-01-09)
 
 
