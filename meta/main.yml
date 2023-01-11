@@ -6,7 +6,7 @@ galaxy_info:
   role_name: mealie
   description: Install Mealie with SQLite via Docker
   min_ansible_version: 2.4
-  min_ansible_version: 2.4
+  min_ansible_container_version: 2.4
   license: MIT
   galaxy_tags:
     - mealie
