@@ -2,97 +2,55 @@
 
 This role installs Mealie via Docker compose.
 
-This role has been generated using the [cookiecutter](https://github.com/cookiecutter/cookiecutter) tool, you can generate a similar role that fits your needs using the this [cookiecutter template](https://github.com/idealista/cookiecutter-ansible-role).
+## Requirements
 
-- [Getting Started](#getting-started)
-  - [Prerequisities](#prerequisities)
-  - [Installing](#installing)
-- [Usage](#usage)
-- [Testing](#testing)
-- [Built With](#built-with)
-- [Versioning](#versioning)
-- [Authors](#authors)
-- [License](#license)
-- [Contributing](#contributing)
+None
 
-## Getting Started
+## Role Variables
 
-These instructions will get you a copy of the role for your Ansible playbook. Once launched, it will install Mealie.
-
-### Prerequisities
-
-Ansible 5.2.0 version installed.
-
-Molecule 3.x.x version installed.
-
-For testing purposes, [Molecule](https://molecule.readthedocs.io/) with [Docker](https://www.docker.com/) as driver and [Goss](https://github.com/aelsabbahy/goss) as verifier.
-
-### Installing
-
-Create or add to your roles dependency file (e.g requirements.yml):
+All variables are listed below (see also `defaults/main.yml`).
 
 ```yml
-- src: ansible-role-mealie
-  version: 1.0.0
-  name: laurivan.mealie
+mealie_docker_version: "latest"
+mealie_port: "9925"
+mealie_timezone: "Europe/Brussels"
+
+# Mealie paths
+mealie_root_path: /opt/mealie
+mealie_config_path: "{{ mealie_root_path }}/conf"
+mealie_data_path: "{{ mealie_root_path }}/data"
+mealie_skeleton_paths:
+  - "{{ mealie_config_path }}"
+  - "{{ mealie_data_path }}"
 ```
 
-Install the role with ansible-galaxy command:
+## Dependencies
 
-```sh
-ansible-galaxy install -p roles -r requirements.yml -f
-```
+You need a machine with docker and docker-compose installed.
 
-Use in a playbook:
+## Example Playbook
 
 ```yml
----
-- hosts: someserver
+- hosts: servers
   roles:
-    - role: laurivan.mealie
+      - 'laurivan.mealie'
 ```
 
-## Usage
+## License
 
-Look to the [defaults](defaults/main.yml) properties file to see the possible configuration properties, it is very likely that you will not need to override any variables.
+This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license - see the [LICENSE](LICENSE) file for details.
 
-## Testing
+![MIT License](https://img.shields.io/badge/license-MIT%20License-brightgreen)
 
-### Install dependencies
+## Author Information
 
-```sh
-pipenv sync
-```
-
-For more information read the [pipenv docs](https://pipenv-fork.readthedocs.io/en/latest/).
-
-### Run test
-
-```sh
-pipenv run molecule test 
-```
+This role was created in 2023 by [Laur Ivan](https://www.laurivan.com).
 
 ## Built With
 
 ![Ansible](https://img.shields.io/badge/ansible-5.2.0-green.svg)
 ![Molecule](https://img.shields.io/badge/molecule-3.4.0-green.svg)
 ![Goss](https://img.shields.io/badge/goss-0.3.16-green.svg)
-
-## Versioning
-
-For the versions available, see the [tags on this repository](https://git.laurivan.com/Dev/ansible-role-mealie/tags).
-
-Additionaly you can see what change in each version in the [CHANGELOG.md](CHANGELOG.md) file.
-
-## Authors
-
-- **Laur IVAN** - [web](https://www.laurivan.com)
-
-## License
-
-![MIT License](https://img.shields.io/badge/license-MIT%20License-brightgreen)
-
-This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license - see the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
