@@ -9,4 +9,3 @@
   import_tasks: install.yml
   tags:
     - mealie_install
-

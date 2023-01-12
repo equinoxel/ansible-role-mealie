@@ -13,16 +13,12 @@ galaxy_info:
     - recipe
     - docker
   platforms:
-    
     - name: Debian
-      versions: 
+      versions:
         - bullseye
         - buster
-    
-    
     - name: Ubuntu
-      versions: 
+      versions:
         - bionic
         - focal
         - jammy
-    
