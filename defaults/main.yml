@@ -1,5 +1,4 @@
 ---
-
 mealie_docker_version: "latest"
 mealie_port: "9925"
 mealie_timezone: "Europe/Brussels"

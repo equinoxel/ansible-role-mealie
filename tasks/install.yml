@@ -1,7 +1,6 @@
 ---
 - name: "MEALIE | Ensure mealie is running"
-  community.docker.docker_compose:
-    project_src: "{{ mealie_config_path | expanduser | realpath }}"
-    build: false
+  ansible.builtin.command:
+    cmd: "docker compose -f {{ mealie_config_path | expanduser | realpath }}/docker-compose.yml up -d"
   tags:
     - mealie_install
