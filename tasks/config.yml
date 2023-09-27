@@ -15,7 +15,7 @@
 - name: "MEALIE | Write configuration files"
   ansible.builtin.template:
     src: "{{ item }}.j2"
-    dest: "{{ mealie_config_path | expanduser | realpath  }}/{{ item  }}"
+    dest: "{{ mealie_config_path | expanduser | realpath  }}/{{ item }}"
     mode: '0640'
   loop:
     - "docker-compose.yml"
